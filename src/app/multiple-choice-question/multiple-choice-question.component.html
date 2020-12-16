@@ -1,0 +1,28 @@
+<h4>{{question.question}}
+  <span>
+   <i class="fa float-right"
+      [ngClass]="{'fa-check': selected === question.correct && grading, 'fa-times': selected !== question.correct && grading}">
+</i>
+</span></h4>
+
+<div class="form-check"
+     [ngClass]="{'green': grading && choice === question.correct, 'red': grading && question.correct !== selected && choice === selected}"
+     *ngFor="let choice of question.choices">
+  <label class="form-check-label">
+    <input type="radio" class="form-check-input" name={{question._id} value={{choice}}
+           (change)="radioChangeHandler($event)">
+    {{choice}}
+  </label>
+</div>
+
+<div>
+  <p>Your answer: {{selected}}</p>
+</div>
+
+<div>
+  <button class="btn btn-success" (click)="grade()" >Grade</button>
+</div>
+
+
+
+

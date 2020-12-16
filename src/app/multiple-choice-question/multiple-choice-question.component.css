@@ -1,0 +1,15 @@
+.green {
+  background-color: #a8dda8;
+}
+
+.red {
+  background-color: #ff9a8c;
+}
+
+.fa-check {
+  color: green;
+}
+
+.fa-times {
+  color: red;
+}
