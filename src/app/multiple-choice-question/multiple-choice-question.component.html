@@ -9,7 +9,7 @@
      [ngClass]="{'green': grading && choice === question.correct, 'red': grading && question.correct !== selected && choice === selected}"
      *ngFor="let choice of question.choices">
   <label class="form-check-label">
-    <input type="radio" class="form-check-input" name={{question._id} value={{choice}}
+    <input type="radio" class="form-check-input" name={{question._id}} value={{choice}}
            (change)="radioChangeHandler($event)">
     {{choice}}
   </label>
